@@ -1,861 +1,321 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#071827">
-<meta name="description" content="الجولة الافتراضية داخل مدرسة ثابت بن قيس للتعليم الأساسي، سلطنة عمان">
-<title>الجولة الافتراضية | مدرسة ثابت بن قيس</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
 <style>
-:root{
-  --bg:#071827;
-  --panel:#102d46;
-  --panel2:#173c56;
-  --gold:#e9bd68;
-  --mint:#53e1bd;
-  --white:#f5f8fc;
-  --muted:#a9bdcc;
-  --line:#ffffff20;
-  --shadow:0 15px 45px #0005;
-  --radius:18px;
+#oman-heritage-tour {
+  direction: rtl;
+  padding: 55px 20px;
+  background: linear-gradient(145deg,#071b2b,#102f40 60%,#173d48);
+  color: #fff;
+  font-family: Tahoma, Arial, sans-serif;
+  border-radius: 22px;
+  margin: 30px auto;
+  max-width: 1250px;
 }
-
-*{box-sizing:border-box;margin:0;padding:0}
-
-html{
-  scroll-behavior:smooth;
+#oman-heritage-tour * { box-sizing: border-box; }
+#oman-heritage-tour .tour-head {
+  text-align: center;
+  margin-bottom: 30px;
 }
-
-body{
-  background:var(--bg);
-  color:var(--white);
-  font-family:'Cairo',sans-serif;
-  line-height:1.8;
-  overflow-x:hidden;
+#oman-heritage-tour .tour-head h2 {
+  color: #e5c27a;
+  font-size: clamp(25px,4vw,38px);
+  margin: 0 0 12px;
 }
-
-button,a{font-family:inherit}
-button{cursor:pointer}
-a{text-decoration:none;color:inherit}
-
-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:#071827f5;
-  backdrop-filter:blur(15px);
-  border-bottom:1px solid var(--line);
+#oman-heritage-tour .tour-head p {
+  color: #d4e0e5;
+  line-height: 1.9;
+  max-width: 760px;
+  margin: auto;
 }
-
-.nav{
-  max-width:1250px;
-  margin:auto;
-  padding:13px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:15px;
+#oman-heritage-tour .tour-hero {
+  background: linear-gradient(120deg,#183d4b,#0a2435);
+  border: 1px solid #bd9b5b;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  margin-bottom: 30px;
 }
-
-.logo{
-  color:var(--gold);
-  font-size:20px;
-  font-weight:900;
+#oman-heritage-tour .tour-hero .globe {
+  font-size: 65px;
+  margin-bottom: 10px;
 }
-
-.logo span{
-  display:block;
-  color:var(--muted);
-  font-size:11px;
-  font-weight:500;
+#oman-heritage-tour .tour-hero h3 {
+  color: #f0d18e;
+  font-size: 23px;
 }
-
-.nav-link{
-  color:var(--mint);
-  font-size:13px;
-  font-weight:700;
+#oman-heritage-tour .tour-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
 }
-
-.hero{
-  min-height:390px;
-  padding:65px 20px;
-  display:flex;
-  align-items:center;
-  background:
-    linear-gradient(90deg,#071827 5%,#071827e8 55%,#07182780),
-    url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=85')
-    center/cover;
+#oman-heritage-tour .tour-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: .2s;
+  border: 1px solid transparent;
 }
-
-.hero-content{
-  max-width:1200px;
-  width:100%;
-  margin:auto;
+#oman-heritage-tour .tour-btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
 }
-
-.hero-tag{
-  display:inline-block;
-  padding:7px 17px;
-  border:1px solid #53e1bd88;
-  border-radius:30px;
-  color:var(--mint);
-  background:#53e1bd12;
-  font-size:13px;
+#oman-heritage-tour .google-btn {
+  background: #e8c779;
+  color: #142b38;
 }
-
-.hero h1{
-  font-size:clamp(35px,6vw,65px);
-  line-height:1.4;
-  margin:20px 0;
-  font-weight:900;
+#oman-heritage-tour .earth-btn {
+  background: #147e80;
+  color: white;
 }
-
-.hero h1 em{
-  color:var(--gold);
-  font-style:normal;
+#oman-heritage-tour .street-btn {
+  background: #244c60;
+  color: white;
+  border-color: #6b9cac;
 }
-
-.hero p{
-  max-width:650px;
-  color:#d4e2ed;
-  font-size:16px;
+#oman-heritage-tour .tour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(245px,1fr));
+  gap: 18px;
 }
-
-.btn{
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  gap:8px;
-  padding:11px 20px;
-  border:0;
-  border-radius:10px;
-  background:var(--gold);
-  color:#102033;
-  font-weight:800;
-  font-size:13px;
-  transition:.25s;
-  margin:5px 3px;
+#oman-heritage-tour .heritage-card {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(229,194,122,.4);
+  border-radius: 17px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
 }
-
-.btn:hover{
-  transform:translateY(-3px);
-  filter:brightness(1.08);
+#oman-heritage-tour .heritage-card .fort-icon {
+  font-size: 35px;
 }
-
-.btn.secondary{
-  background:#ffffff14;
-  color:white;
-  border:1px solid #ffffff35;
+#oman-heritage-tour .heritage-card h3 {
+  color: #f0d18e;
+  margin: 0;
+  font-size: 20px;
 }
-
-.btn.mint{
-  background:var(--mint);
-  color:#092a2a;
+#oman-heritage-tour .heritage-card p {
+  color: #d3e0e5;
+  margin: 0;
+  line-height: 1.7;
+  font-size: 14px;
 }
-
-main{
-  max-width:1300px;
-  margin:auto;
-  padding:35px 20px 65px;
+#oman-heritage-tour .heritage-card .tour-actions {
+  margin-top: auto;
+  flex-direction: column;
 }
-
-.section-head{
-  text-align:center;
-  margin:25px 0 30px;
+#oman-heritage-tour .heritage-card .tour-btn {
+  width: 100%;
 }
-
-.section-head h2{
-  color:var(--gold);
-  font-size:clamp(24px,4vw,34px);
-  font-weight:900;
+#oman-heritage-tour .tour-note {
+  text-align: center;
+  color: #c7d8df;
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 25px;
 }
-
-.section-head p{
-  color:var(--muted);
-  font-size:14px;
-  margin-top:7px;
-}
-
-.tour-layout{
-  display:grid;
-  grid-template-columns:300px 1fr;
-  gap:20px;
-  align-items:start;
-}
-
-.panel{
-  background:linear-gradient(145deg,#153952,#0c263d);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  padding:20px;
-  box-shadow:var(--shadow);
-}
-
-.panel-title{
-  color:var(--gold);
-  font-size:18px;
-  margin-bottom:15px;
-}
-
-.station-list{
-  display:flex;
-  flex-direction:column;
-  gap:9px;
-  max-height:650px;
-  overflow-y:auto;
-  padding-left:3px;
-}
-
-.station-btn{
-  width:100%;
-  text-align:right;
-  padding:12px;
-  background:#102d46;
-  color:white;
-  border:1px solid var(--line);
-  border-radius:10px;
-  font-size:12px;
-  transition:.2s;
-}
-
-.station-btn:hover,
-.station-btn.active{
-  background:#145345;
-  border-color:var(--mint);
-  color:var(--mint);
-}
-
-.station-btn.done::after{
-  content:" ✓";
-  color:var(--mint);
-  font-weight:900;
-}
-
-.tour-view{
-  background:#0d2941;
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  overflow:hidden;
-}
-
-.tour-heading{
-  padding:20px;
-  border-bottom:1px solid var(--line);
-}
-
-.tour-heading h2{
-  color:var(--gold);
-  font-size:23px;
-}
-
-.tour-heading p{
-  color:var(--muted);
-  font-size:13px;
-  margin-top:5px;
-}
-
-.map-container{
-  position:relative;
-  background:#102d46;
-}
-
-#googleMap{
-  display:block;
-  width:100%;
-  height:450px;
-  border:0;
-  background:#102d46;
-}
-
-.map-label{
-  padding:12px 16px;
-  background:#071827;
-  color:var(--muted);
-  font-size:12px;
-  text-align:center;
-}
-
-.station-info{
-  padding:22px;
-}
-
-.station-info h3{
-  color:var(--mint);
-  font-size:20px;
-  margin-bottom:8px;
-}
-
-.station-info p{
-  color:#d4e2ed;
-  font-size:14px;
-}
-
-.progress-info{
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
-  margin-top:20px;
-  font-size:12px;
-}
-
-.progress-info strong{
-  color:var(--mint);
-}
-
-.progress{
-  height:8px;
-  background:#ffffff20;
-  border-radius:20px;
-  overflow:hidden;
-  margin:10px 0 18px;
-}
-
-.progress span{
-  display:block;
-  height:100%;
-  width:0;
-  background:var(--mint);
-  transition:.3s;
-}
-
-.controls{
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.google-actions{
-  padding:18px;
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:8px;
-  border-top:1px solid var(--line);
-}
-
-.notice{
-  margin-top:22px;
-  padding:17px;
-  background:#ffffff09;
-  border:1px solid var(--line);
-  border-radius:13px;
-  color:var(--muted);
-  font-size:12px;
-}
-
-.notice strong{
-  color:var(--gold);
-}
-
-footer{
-  text-align:center;
-  padding:35px 15px;
-  background:#04111e;
-  color:var(--muted);
-  font-size:13px;
-  border-top:1px solid var(--line);
-}
-
-footer strong{
-  color:var(--gold);
-}
-
-@media(max-width:850px){
-  .nav{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .tour-layout{
-    grid-template-columns:1fr;
-  }
-
-  .station-list{
-    display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    max-height:380px;
-  }
-
-  #googleMap{
-    height:350px;
-  }
-
-  .hero{
-    min-height:330px;
-    padding:45px 18px;
-  }
-
-  main{
-    padding:25px 13px 45px;
-  }
-
-  .controls .btn{
-    flex:1;
-  }
-}
-
-@media(max-width:420px){
-  .station-list{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .station-btn{
-    font-size:11px;
-    padding:10px 7px;
-  }
+@media(max-width:600px) {
+  #oman-heritage-tour { padding: 35px 13px; }
+  #oman-heritage-tour .tour-hero { padding: 18px 12px; }
 }
 </style>
-</head>
 
-<body>
+<section id="oman-heritage-tour">
 
-<header>
-  <div class="nav">
-    <div class="logo">
-      🌍 الجولة الافتراضية
-      <span>مدرسة ثابت بن قيس للتعليم الأساسي | سلطنة عُمان</span>
+  <header class="tour-head">
+    <h2>رحلة عبر التاريخ العُماني</h2>
+    <p>
+      انطلق في جولة افتراضية لاستكشاف القلاع والحصون
+      والمعالم التاريخية في سلطنة عُمان باستخدام
+      Google Maps وGoogle Earth.
+    </p>
+  </header>
+
+  <div class="tour-hero">
+    <div class="globe">🌍</div>
+    <h3>استكشف عُمان من الفضاء إلى المعلم التراثي</h3>
+    <p>
+      شاهد الموقع جغرافيًا، وانتقل إلى صور الأقمار الصناعية،
+      وافتح تجربة الأرض ثلاثية الأبعاد حيث تتوفر.
+    </p>
+    <div class="tour-actions">
+      <a class="tour-btn google-btn"
+         href="https://www.google.com/maps/search/?api=1&query=Oman"
+         target="_blank" rel="noopener noreferrer">
+        🌐 استكشف عُمان على Google Maps
+      </a>
+      <a class="tour-btn earth-btn"
+         href="https://earth.google.com/web/"
+         target="_blank" rel="noopener noreferrer">
+        🌎 افتح Google Earth ثلاثي الأبعاد
+      </a>
     </div>
-
-    <a class="nav-link" href="#tour">ابدأ الجولة ↓</a>
   </div>
-</header>
 
-<main>
+  <div class="tour-grid" id="omanHeritageCards"></div>
 
-  <section class="hero">
-    <div class="hero-content">
-      <span class="hero-tag">تجربة استكشافية رقمية</span>
+  <p class="tour-note">
+    ملاحظة: توفر العرض ثلاثي الأبعاد والتجول البانورامي
+    يختلف حسب المعلم والتغطية المتاحة في Google.
+    روابط الجولة تفتح في نافذة مستقلة، ولا تحتاج إلى
+    مفتاح Google Maps API.
+  </p>
 
-      <h1>
-        اكتشف مدرستك...<br>
-        <em>وتجوّل فيها افتراضيًا</em>
-      </h1>
-
-      <p>
-        جولة افتراضية للتعرف على مرافق مدرسة ثابت بن قيس،
-        من خلال خرائط Google وخدمات التجول المتاحة.
-      </p>
-
-      <a class="btn" href="#tour">ابدأ الجولة الآن ←</a>
-    </div>
-  </section>
-
-  <section id="tour">
-
-    <div class="section-head">
-      <h2>الجولة الافتراضية داخل المدرسة</h2>
-      <p>13 محطة لاستكشاف مرافق مدرسة ثابت بن قيس</p>
-    </div>
-
-    <div class="tour-layout">
-
-      <!-- قائمة المحطات -->
-      <aside class="panel">
-        <h3 class="panel-title">📍 محطات الجولة</h3>
-        <div class="station-list" id="stationList"></div>
-      </aside>
-
-      <!-- شاشة الجولة -->
-      <div class="tour-view">
-
-        <div class="tour-heading">
-          <h2 id="stationTitle">المحطة الأولى: البوابة الرئيسية</h2>
-          <p id="stationDescription">
-            بداية الجولة والتعرف على المدخل الرئيسي للمدرسة.
-          </p>
-        </div>
-
-        <div class="map-container">
-          <iframe
-            id="googleMap"
-            title="موقع مدرسة ثابت بن قيس على خرائط Google"
-            loading="lazy"
-            allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-
-          <div class="map-label">
-            خريطة Google للموقع المحدد
-          </div>
-        </div>
-
-        <div class="station-info">
-
-          <h3 id="currentStationName">البوابة الرئيسية</h3>
-
-          <p id="currentStationText">
-            استكشف موقع المدرسة وتعرّف على المحطة الأولى.
-          </p>
-
-          <div class="progress-info">
-            <span id="stationCounter">المحطة 1 من 13</span>
-            <strong id="stationPercent">8%</strong>
-          </div>
-
-          <div class="progress">
-            <span id="tourProgress"></span>
-          </div>
-
-          <div class="controls">
-            <button class="btn secondary" id="previousBtn">
-              → المحطة السابقة
-            </button>
-
-            <button class="btn" id="nextBtn">
-              المحطة التالية ←
-            </button>
-          </div>
-
-        </div>
-
-        <div class="google-actions">
-
-          <button class="btn mint" id="openMapBtn">
-            📍 افتح الموقع في Google Maps
-          </button>
-
-          <button class="btn" id="streetViewBtn">
-            🌐 البحث عن التجول الافتراضي
-          </button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="notice">
-      <strong>تنبيه بشأن التجول الافتراضي:</strong>
-      يعرض الإطار خريطة موقع المدرسة. أما التجول داخل المبنى
-      فيعتمد على وجود صور داخلية منشورة في Google Street View.
-      عند فتح Google Maps، ابحث عن الصور البانورامية المتاحة
-      أو استخدم رمز التجول الافتراضي إذا ظهر على الخريطة.
-    </div>
-
-  </section>
-
-</main>
-
-<footer>
-  <strong>الجغرافيا الذكية – الجولة الافتراضية</strong><br>
-  مدرسة ثابت بن قيس للتعليم الأساسي – سلطنة عُمان<br>
-  إعداد وتصميم: د. قناوي حسين
-</footer>
+</section>
 
 <script>
+(function () {
+  "use strict";
 
-/* =====================================
-   إعداد موقع المدرسة
-   ===================================== */
+  const heritageSites = [
+    {
+      name: "قلعة نزوى",
+      city: "نزوى - الداخلية",
+      lat: 22.933439,
+      lng: 57.530614,
+      description: "معلم تاريخي بارز يجسد العمارة الدفاعية العُمانية."
+    },
+    {
+      name: "قلعة بهلاء",
+      city: "بهلاء - الداخلية",
+      lat: 22.973978,
+      lng: 57.312870,
+      description: "قلعة تاريخية مدرجة ضمن قائمة التراث العالمي."
+    },
+    {
+      name: "قلعة جبرين",
+      city: "بهلاء - الداخلية",
+      lat: 22.915495,
+      lng: 57.249798,
+      description: "تتميز بالعمارة العُمانية والزخارف والأسقف التقليدية."
+    },
+    {
+      name: "حصن الرستاق",
+      city: "الرستاق - جنوب الباطنة",
+      lat: 23.391827,
+      lng: 57.426260,
+      description: "أحد المعالم التاريخية المهمة في محافظة جنوب الباطنة."
+    },
+    {
+      name: "قلعة نخل",
+      city: "نخل - جنوب الباطنة",
+      lat: 23.395048,
+      lng: 57.829249,
+      description: "حصن تاريخي يطل على مشهد جبلي مميز."
+    },
+    {
+      name: "قلعة الحزم",
+      city: "الرستاق - جنوب الباطنة",
+      lat: 23.558448,
+      lng: 57.483460,
+      description: "نموذج مميز لفنون البناء والتحصين العُماني."
+    },
+    {
+      name: "قلعة صحار",
+      city: "صحار - شمال الباطنة",
+      lat: 24.362402,
+      lng: 56.749850,
+      description: "ترتبط بتاريخ صحار البحري والتجاري."
+    },
+    {
+      name: "قلعة خصب",
+      city: "خصب - مسندم",
+      lat: 26.198243,
+      lng: 56.249772,
+      description: "معلم تراثي في محافظة مسندم."
+    },
+    {
+      name: "قلعة مرباط",
+      city: "مرباط - ظفار",
+      lat: 16.993176,
+      lng: 54.694651,
+      description: "معلم تاريخي في الساحل الشرقي لمحافظة ظفار."
+    }
+  ];
 
-/*
-  يُستخدم اسم المدرسة للبحث في Google Maps.
-  لم نضع إحداثيات غير مؤكدة لمبنى المدرسة.
-*/
+  const container = document.getElementById("omanHeritageCards");
 
-const SCHOOL_QUERY =
-  "مدرسة ثابت بن قيس للتعليم الأساسي، بركاء، سلطنة عمان";
+  if (!container) return;
 
-const GOOGLE_MAP_URL =
-  "https://www.google.com/maps/search/?api=1&query=" +
-  encodeURIComponent(SCHOOL_QUERY);
-
-const GOOGLE_MAP_EMBED =
-  "https://maps.google.com/maps?q=" +
-  encodeURIComponent(SCHOOL_QUERY) +
-  "&output=embed";
-
-/* =====================================
-   المحطات الثلاث عشرة
-   ===================================== */
-
-const stations = [
-
-  {
-    name:"البوابة الرئيسية",
-    icon:"🏫",
-    description:"بداية الجولة الافتراضية والتعرف على المدخل الرئيسي للمدرسة."
-  },
-
-  {
-    name:"جوانب المدرسة",
-    icon:"🏢",
-    description:"التعرف على الجوانب الخارجية للمبنى المدرسي."
-  },
-
-  {
-    name:"الممرات والدرج – الجانب الأيسر",
-    icon:"🚶",
-    description:"استكشاف الممرات والدرج في الجانب الأيسر."
-  },
-
-  {
-    name:"الممرات والدرج – الجانب الأيمن",
-    icon:"🚶",
-    description:"استكشاف الممرات والدرج في الجانب الأيمن."
-  },
-
-  {
-    name:"غرفة المعلمين الأولى",
-    icon:"👨‍🏫",
-    description:"التعرف على بيئة العمل التعليمية للمعلمين."
-  },
-
-  {
-    name:"غرفة المعلمين الثانية والإدارة المدرسية",
-    icon:"🏢",
-    description:"التعرف على مرافق الإدارة والبيئة التنظيمية للمدرسة."
-  },
-
-  {
-    name:"الفصول الدراسية",
-    icon:"📚",
-    description:"استكشاف بيئة التعلم داخل الفصول الدراسية."
-  },
-
-  {
-    name:"مركز مصادر التعلم",
-    icon:"📖",
-    description:"التعرف على مصادر المعرفة والقراءة والبحث."
-  },
-
-  {
-    name:"مختبر الحاسوب",
-    icon:"💻",
-    description:"استكشاف بيئة التعلم الرقمي والتقنيات الحديثة."
-  },
-
-  {
-    name:"مختبر الدراسات الاجتماعية",
-    icon:"🌍",
-    description:"التعرف على بيئة تعلم الجغرافيا والتاريخ."
-  },
-
-  {
-    name:"الساحة المدرسية",
-    icon:"🌳",
-    description:"استكشاف الساحة والأنشطة المدرسية."
-  },
-
-  {
-    name:"مختبر الجغرافيا والتقنيات الحديثة",
-    icon:"🛰️",
-    description:"اكتشاف الخرائط الرقمية ونظم المعلومات الجغرافية والاستشعار عن بُعد."
-  },
-
-  {
-    name:"قاعة الأنشطة والابتكار",
-    icon:"💡",
-    description:"مساحة الإبداع والمبادرات والمشروعات الطلابية."
+  function makeLink(url, className, label) {
+    const a = document.createElement("a");
+    a.className = "tour-btn " + className;
+    a.href = url;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.textContent = label;
+    return a;
   }
 
-];
+  heritageSites.forEach(function (site) {
+    const coords = site.lat + "," + site.lng;
 
-/* =====================================
-   عناصر الصفحة
-   ===================================== */
+    const mapsUrl =
+      "https://www.google.com/maps/search/?api=1&query=" +
+      encodeURIComponent(coords);
 
-const stationList = document.getElementById("stationList");
-const stationTitle = document.getElementById("stationTitle");
-const stationDescription = document.getElementById("stationDescription");
-const currentStationName = document.getElementById("currentStationName");
-const currentStationText = document.getElementById("currentStationText");
-const stationCounter = document.getElementById("stationCounter");
-const stationPercent = document.getElementById("stationPercent");
-const tourProgress = document.getElementById("tourProgress");
-const googleMap = document.getElementById("googleMap");
+    const earthUrl =
+      "https://earth.google.com/web/search/" +
+      encodeURIComponent(site.name + ", Oman");
 
-let currentStation = 0;
+    const streetUrl =
+      "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=" +
+      encodeURIComponent(coords);
 
-/* =====================================
-   إنشاء قائمة المحطات
-   ===================================== */
+    const directionsUrl =
+      "https://www.google.com/maps/dir/?api=1&destination=" +
+      encodeURIComponent(coords);
 
-function buildStationList(){
+    const card = document.createElement("article");
+    card.className = "heritage-card";
 
-  stationList.replaceChildren();
+    const icon = document.createElement("div");
+    icon.className = "fort-icon";
+    icon.textContent = "🏰";
 
-  stations.forEach((station,index)=>{
+    const title = document.createElement("h3");
+    title.textContent = site.name;
 
-    const button = document.createElement("button");
+    const city = document.createElement("p");
+    city.textContent = "📍 " + site.city;
 
-    button.type = "button";
-    button.className = "station-btn";
+    const description = document.createElement("p");
+    description.textContent = site.description;
 
-    button.textContent =
-      (index + 1) + ". " + station.name;
+    const actions = document.createElement("div");
+    actions.className = "tour-actions";
 
-    button.addEventListener("click",()=>{
-
-      currentStation = index;
-      renderStation();
-
-    });
-
-    stationList.appendChild(button);
-
-  });
-
-}
-
-/* =====================================
-   عرض المحطة الحالية
-   ===================================== */
-
-function renderStation(){
-
-  const station = stations[currentStation];
-
-  stationTitle.textContent =
-    "المحطة " + (currentStation + 1) + ": " + station.name;
-
-  stationDescription.textContent =
-    station.description;
-
-  currentStationName.textContent =
-    station.icon + " " + station.name;
-
-  currentStationText.textContent =
-    station.description;
-
-  const percent = Math.round(
-    ((currentStation + 1) / stations.length) * 100
-  );
-
-  stationCounter.textContent =
-    "المحطة " + (currentStation + 1) +
-    " من " + stations.length;
-
-  stationPercent.textContent = percent + "%";
-
-  tourProgress.style.width = percent + "%";
-
-  document.querySelectorAll(".station-btn").forEach((button,index)=>{
-
-    button.classList.toggle(
-      "active",
-      index === currentStation
+    actions.appendChild(
+      makeLink(mapsUrl, "google-btn", "📍 الموقع على Google Maps")
     );
 
+    actions.appendChild(
+      makeLink(earthUrl, "earth-btn", "🌎 استكشاف ثلاثي الأبعاد")
+    );
+
+    actions.appendChild(
+      makeLink(streetUrl, "street-btn", "🔄 تجربة Street View 360°")
+    );
+
+    actions.appendChild(
+      makeLink(directionsUrl, "street-btn", "🧭 الوصول إلى المعلم")
+    );
+
+    card.appendChild(icon);
+    card.appendChild(title);
+    card.appendChild(city);
+    card.appendChild(description);
+    card.appendChild(actions);
+
+    container.appendChild(card);
   });
 
-  document.getElementById("previousBtn").disabled =
-    currentStation === 0;
-
-  document.getElementById("nextBtn").disabled =
-    currentStation === stations.length - 1;
-
-  document.getElementById("previousBtn").style.opacity =
-    currentStation === 0 ? ".45" : "1";
-
-  document.getElementById("nextBtn").style.opacity =
-    currentStation === stations.length - 1 ? ".45" : "1";
-
-}
-
-/* =====================================
-   التنقل بين المحطات
-   ===================================== */
-
-function nextStation(){
-
-  if(currentStation < stations.length - 1){
-
-    currentStation++;
-    renderStation();
-
-  }
-
-}
-
-function previousStation(){
-
-  if(currentStation > 0){
-
-    currentStation--;
-    renderStation();
-
-  }
-
-}
-
-document.getElementById("nextBtn").addEventListener(
-  "click",
-  nextStation
-);
-
-document.getElementById("previousBtn").addEventListener(
-  "click",
-  previousStation
-);
-
-/* =====================================
-   Google Maps
-   ===================================== */
-
-function openGoogleMap(){
-
-  window.open(
-    GOOGLE_MAP_URL,
-    "_blank",
-    "noopener,noreferrer"
-  );
-
-}
-
-function openStreetViewSearch(){
-
-  /*
-    يفتح موقع المدرسة في Google Maps.
-    يختار الزائر صور Street View إذا كانت متاحة.
-    لا نضع إحداثيات افتراضية غير مؤكدة.
-  */
-
-  const url =
-    "https://www.google.com/maps/search/?api=1&query=" +
-    encodeURIComponent(SCHOOL_QUERY);
-
-  window.open(
-    url,
-    "_blank",
-    "noopener,noreferrer"
-  );
-
-}
-
-document.getElementById("openMapBtn").addEventListener(
-  "click",
-  openGoogleMap
-);
-
-document.getElementById("streetViewBtn").addEventListener(
-  "click",
-  openStreetViewSearch
-);
-
-/* =====================================
-   تشغيل الجولة
-   ===================================== */
-
-function initializeTour(){
-
-  googleMap.src = GOOGLE_MAP_EMBED;
-
-  buildStationList();
-
-  renderStation();
-
-}
-
-initializeTour();
-
+})();
 </script>
-
-</body>
-</html>
